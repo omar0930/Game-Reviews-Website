@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Game Reviews</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="bg-dark text-light">
+    <!--  Navbar with Categories -->
+    <nav class="navbar navbar-dark bg-dark mb-4 shadow-sm">
+      <div
+        class="container d-flex flex-wrap align-items-center justify-content-between py-2"
+      >
+        <div class="d-flex align-items-center">
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/833/833314.png"
+            alt="logo"
+            width="30"
+            class="me-2"
+          />
+          <h1 class="navbar-brand mb-0 fw-bold fs-4">GAME REVIEWS</h1>
+        </div>
+        <div id="categoryList" class="d-flex flex-wrap gap-2">
+          <button class="btn btn-outline-info" data-category="mmorpg">
+            MMORPG
+          </button>
+          <button class="btn btn-outline-info" data-category="shooter">
+            Shooter
+          </button>
+          <button class="btn btn-outline-info" data-category="sailing">
+            Sailing
+          </button>
+          <button class="btn btn-outline-info" data-category="permadeath">
+            Permadeath
+          </button>
+          <button class="btn btn-outline-info" data-category="superhero">
+            Superhero
+          </button>
+          <button class="btn btn-outline-info" data-category="pixel">
+            Pixel
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Game Cards -->
+    <div class="container">
+      <div id="gameContainer" class="row g-4">
+        <!-- Cards will be injected here by JS -->
+      </div>
+    </div>
+
+    <!-- Modal for Game Details -->
+    <div
+      class="modal fade"
+      id="gameModal"
+      tabindex="-1"
+      aria-labelledby="gameModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content bg-dark text-light">
+          <div class="modal-header">
+            <h5 class="modal-title" id="gameModalLabel">Game Title</h5>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div class="modal-body" id="modalBody"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Loading Screen -->
+    <div id="loadingScreen" class="loading-screen d-none">
+      <div class="spinner"></div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/Game.js"></script>
+    <script src="js/GameService.js"></script>
+    <script src="js/GameUI.js"></script>
+    <script src="js/GameApp.js"></script>
+  </body>
+</html>
